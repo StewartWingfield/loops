@@ -92,3 +92,31 @@ jan1990 = (birthDate) => {
 personsBefore1990.forEach((person) => {
   console.log(`People born before 1990: First Name: ${person.firstName}, Last Name: ${person.lastName}, Birth Date: ${person.birthDate}, Gender: ${person.gender}`)
 });
+
+
+//.find 
+
+ myFind = (arr, b) => {
+
+  for (let i = 0; i < arr.length; i++) {
+
+    if (b(arr[i], i, arr)) {
+      return arr[i];
+    }
+  }
+  return undefined;
+}
+
+//.findIndex
+
+myFindIndex = (arr, c) => {
+  
+  for (let i = 0; i < arr.length; i++) {
+    
+    if (c(arr[i], i, arr)) {
+      return i;
+    }
+  }
+  
+  return undefined;
+}
